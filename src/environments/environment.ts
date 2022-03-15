@@ -2,8 +2,15 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+const apiUrl: string = 'https://jsonplaceholder.typicode.com/';
+
+export enum apiENUM {
+  users = 'users',
+}
+
 export const environment = {
-  production: false
+  production: false,
+  apiUrl,
 };
 
 /*

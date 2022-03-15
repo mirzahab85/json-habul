@@ -1,0 +1,7 @@
+<div *ngFor="let user of users">
+  {{ user.icon }}
+</div>
+
+<div *ngFor="let user of asObss | async">
+  {{ user.name }}
+</div>
