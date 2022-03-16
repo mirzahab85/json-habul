@@ -4,8 +4,14 @@
 
 const apiUrl: string = 'https://jsonplaceholder.typicode.com/';
 
+
 export enum apiENUM {
   users = 'users',
+  albums = 'albums',
+  posts = 'posts',
+  photos = 'photos',
+  todos = "todos",
+  comments = 'comments',
 }
 
 export const environment = {

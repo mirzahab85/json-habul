@@ -1,0 +1,19 @@
+.content
+{
+  padding: 16px;
+}
+
+.content > mat-card {
+  width: 40px;
+}
+
+.column-label {
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,14 +1,13 @@
-
-
 // ANGULAR
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 // APP
 import { HomePageComponent } from './home-page/home-page.component';
-
-
-
+import { CommentsComponent } from './comments/comments.component';
+import { PhotosComponent } from './photos/photos.component';
+import { TodosComponent } from './todos/todos.component';
+import { AlbumsComponent } from './albums/albums.component';
 
 const routes: Routes = [
 
@@ -18,9 +17,23 @@ const routes: Routes = [
     component: HomePageComponent,
     children: [
       {
-        path: 'Home',
+        path: 'comments',
         // deklarisana u app modulu.
-        component: HomePageComponent
+        component: CommentsComponent,
+      },
+      {
+        path: 'albums',
+        // deklarisana u app modulu.
+        component: AlbumsComponent,
+      },
+      { path: 'photos',
+        // deklarisana u app modulu.
+        component: PhotosComponent,
+      },
+      {
+        path: 'todos',
+        // deklarisana u app modulu.
+        component: TodosComponent
       }
     ],
     data: { label: 'Comments' }

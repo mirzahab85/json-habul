@@ -22,11 +22,21 @@ import { LayoutModule } from './layout/layout.module';
 
 // MODULE imports
 import { HomePageModule } from './home-page/home-page.module';
+import { CommentsComponent } from './comments/comments.component';
+import { PhotosComponent } from './photos/photos.component';
+import { TodosComponent } from './todos/todos.component';
+import { PostComponent } from './post/post.component';
+import { AlbumsComponent } from './albums/albums.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    CommentsComponent,
+    PhotosComponent,
+    TodosComponent,
+    PostComponent,
+    AlbumsComponent,
   ],
   imports: [
     BrowserModule,
