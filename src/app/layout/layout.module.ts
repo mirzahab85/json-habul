@@ -1,9 +1,10 @@
+// ANGULAR
 import { RouterModule } from '@angular/router';
-import { LayoutComponent } from './layout.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-
+// APP
+import { LayoutComponent } from './layout.component';
 
 @NgModule({
   declarations: [

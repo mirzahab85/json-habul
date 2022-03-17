@@ -1,3 +1,4 @@
+import { AlbumsService } from './../services/albums.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlbumsComponent implements OnInit {
 
-  constructor() { }
+  public albumsList: any[] = [];
+
+  constructor(
+
+    private albumService: AlbumsService
+
+  ) { }
 
   ngOnInit(): void {
+    this.albumService.getAllAlbums().subscribe((albums: any[]) => {
+      console.log(albums);
+      this.albumsList = albums;
+    });
   }
 
 }

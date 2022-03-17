@@ -22,6 +22,10 @@ import { LayoutModule } from './layout/layout.module';
 
 // MODULE imports
 import { HomePageModule } from './home-page/home-page.module';
+import { AlbumsService } from './services/albums.service';
+import { CommentsService } from './services/comments.service';
+import { PhotosService } from './services/photos.service';
+import { TodosService } from './services/todos.service';
 import { CommentsComponent } from './comments/comments.component';
 import { PhotosComponent } from './photos/photos.component';
 import { TodosComponent } from './todos/todos.component';
@@ -54,6 +58,10 @@ import { AlbumsComponent } from './albums/albums.component';
   ],
   providers: [
     UserService,
+    CommentsService,
+    AlbumsService,
+    PhotosService,
+    TodosService
 
   ],
   bootstrap: [AppComponent]

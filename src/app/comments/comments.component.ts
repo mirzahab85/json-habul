@@ -1,3 +1,4 @@
+import { CommentsService } from './../services/comments.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommentsComponent implements OnInit {
 
-  constructor() { }
+  public commentsList: any[] = [];
+
+  constructor(
+    private commentsService: CommentsService
+  ) { }
 
   ngOnInit(): void {
+    this.commentsService.getAllComments().subscribe((comment: any[]) => {
+      console.log(comment);
+      this.commentsList = comment;
+    })
   }
 
 }

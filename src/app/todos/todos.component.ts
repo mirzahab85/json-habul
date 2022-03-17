@@ -1,3 +1,4 @@
+import { TodosService } from './../services/todos.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodosComponent implements OnInit {
 
-  constructor() { }
+  public todosList: any[] = [];
+
+  constructor(
+    private todoService: TodosService
+  ) { }
+
 
   ngOnInit(): void {
+    this.todoService.getAllTodos().subscribe((todos: any[]) => {
+      console.log(todos);
+      this.todosList = todos;
+    });
+
+    this.todosList.forEach(() => {
+
+    })
   }
 
 }

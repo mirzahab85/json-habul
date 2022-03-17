@@ -1,17 +1,16 @@
-import { apiENUM, environment  } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { IUserDTO } from './../models/user.model';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { apiENUM, environment } from 'src/environments/environment';
 
 @Injectable()
-export class TodosService {
+  export class TodosService {
 
   constructor(
-    private httpClient: HttpClient,
+    private httpClient: HttpClient
   ) { }
 
-  public getAllUsers(): Observable<IUserDTO[]> {
-    return this.httpClient.get<IUserDTO[]>(environment.apiUrl + apiENUM.todos)
+  public getAllTodos(): Observable<any[]> {
+    return this.httpClient.get<any[]>(environment.apiUrl + apiENUM.photos)
   }
 }
