@@ -26,7 +26,7 @@ const routes: Routes = [
         component: CommentsComponent,
       },
       {
-        path: 'comments/:commentsId',
+        path: 'comments/:commentId',
         // deklarisana u app modulu.
         component: CommentsDetailsComponent,
       },

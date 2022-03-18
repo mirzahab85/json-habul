@@ -1,4 +1,4 @@
-import { CommentsService } from './../services/comments.service';
+import { CommentService } from './../services/comments.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -13,13 +13,13 @@ export class CommentsComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private commentsService: CommentsService
+    private commentService: CommentService
   ) { }
 
   ngOnInit(): void {
-    this.commentsService.getAllComments().subscribe((comment: any[]) => {
-      console.log(comment);
-      this.commentsList = comment;
+    this.commentService.getAllComments().subscribe((comments: any[]) => {
+      console.log(comments);
+      this.commentsList = comments;
 
     });
 

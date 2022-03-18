@@ -1,6 +1,8 @@
+
+
 export interface ICommentDTO {
   id: string;
-  name: string;
+  name: string,
   thumbnailUrl: string;
 }
 
@@ -14,4 +16,7 @@ export class CommentDOM implements ICommentDTO {
 
   }
 
+
+
 }
+

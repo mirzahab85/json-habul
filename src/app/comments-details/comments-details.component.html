@@ -1,1 +1,22 @@
-<p>comments-details works!</p>
+
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxFlex="35" fxFlex.xs="100%" fxFlex.sm="33%">
+      <mat-card class="mat-elevation-z4">
+        <mat-card-header>
+          <mat-card-title>ID: {{commentId}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="assets/images/developer.jpg">
+        <mat-card-content>
+          <mat-card-actions>
+            <h1><b>postId: </b>{{commentDTO?.postId}}</h1>
+            <h1><b>Name:</b> {{commentDTO?.name}}</h1>
+            <h1><b>e-mail:</b> {{commentDTO?.email}}</h1>
+            <h1><b>body:</b> {{commentDTO?.body}}</h1>
+          </mat-card-actions>
+        </mat-card-content>
+      </mat-card>
+
+    </div>
+  </div>
+</div>

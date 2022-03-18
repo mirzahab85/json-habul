@@ -23,7 +23,7 @@ import { LayoutModule } from './layout/layout.module';
 // MODULE imports
 import { HomePageModule } from './home-page/home-page.module';
 import { AlbumsService } from './services/albums.service';
-import { CommentsService } from './services/comments.service';
+import { CommentService } from './services/comments.service';
 import { PhotosService } from './services/photos.service';
 import { TodosService } from './services/todos.service';
 import { CommentsComponent } from './comments/comments.component';
@@ -66,7 +66,7 @@ import { TodosDetailsComponent } from './todos-details/todos-details.component';
   ],
   providers: [
     UserService,
-    CommentsService,
+    CommentService,
     AlbumsService,
     PhotosService,
     TodosService
