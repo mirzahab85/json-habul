@@ -11,6 +11,6 @@ import { apiENUM, environment } from 'src/environments/environment';
   ) { }
 
   public getAllTodos(): Observable<any[]> {
-    return this.httpClient.get<any[]>(environment.apiUrl + apiENUM.photos)
+    return this.httpClient.get<any[]>(environment.apiUrl + apiENUM.todos)
   }
 }

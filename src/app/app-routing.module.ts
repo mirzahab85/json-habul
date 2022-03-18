@@ -1,3 +1,7 @@
+import { TodosDetailsComponent } from './todos-details/todos-details.component';
+import { PhotosDetailsComponent } from './photos-details/photos-details.component';
+import { AlbumsDetailsComponent } from './albums-details/albums-details.component';
+import { CommentsDetailsComponent } from './comments-details/comments-details.component';
 // ANGULAR
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -22,18 +26,37 @@ const routes: Routes = [
         component: CommentsComponent,
       },
       {
+        path: 'comments/:commentsId',
+        // deklarisana u app modulu.
+        component: CommentsDetailsComponent,
+      },
+      {
         path: 'albums',
         // deklarisana u app modulu.
         component: AlbumsComponent,
+      },
+      {
+        path: 'albums/:albumsId',
+        // deklarisana u app modulu.
+        component: AlbumsDetailsComponent,
       },
       { path: 'photos',
         // deklarisana u app modulu.
         component: PhotosComponent,
       },
+      { path: 'photos/:photosId',
+        // deklarisana u app modulu.
+        component: PhotosDetailsComponent,
+      },
       {
         path: 'todos',
         // deklarisana u app modulu.
-        component: TodosComponent
+        component: TodosComponent,
+      },
+      {
+        path: 'todos/:todosId',
+        // deklarisana u app modulu.
+        component: TodosDetailsComponent
       }
     ],
     data: { label: 'Comments' }

@@ -1,5 +1,6 @@
 import { PhotosService } from './../services/photos.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-photos',
@@ -11,6 +12,7 @@ export class PhotosComponent implements OnInit {
   public photosList: any[] = [];
 
   constructor(
+    private router: Router,
     private photosService: PhotosService
   ) { }
 
@@ -19,6 +21,20 @@ export class PhotosComponent implements OnInit {
       console.log(photos);
         this.photosList = photos;
     })
+
+    this.photosList.forEach(() => {
+
+    })
+
   }
 
-}
+    public checkif() {
+      return true || true || this.photosList.includes('photosList')
+    }
+
+    public navigate(photo) {
+      this.router.navigate(['/', 'photos', photo.id])
+    }
+  }
+
+

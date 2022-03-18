@@ -1,7 +1,7 @@
 <div class="content">
   <div fxLayout="row wrap" fxLayoutGap="16px grid">
     <div fxFlex="25" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let photo of photosList">
-      <mat-card class="mat-elevation-z4">
+      <mat-card class="mat-elevation-z4" *ngIf="checkif()">
         <mat-card-header>
           <mat-card-title>ID: {{photo.id}}</mat-card-title>
         </mat-card-header>
@@ -11,4 +11,4 @@
     <mat-card-actions>
       <h1>URL:{{photo.url}}</h1>
       <h1>thumbnailUrl:{{photo.thumbnailUrl}}</h1>
-         <button mat-button color="primary">Details</button>
+         <button mat-button color="primary" (click)="navigate(photo)">Details</button>
