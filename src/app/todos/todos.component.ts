@@ -16,11 +16,14 @@ export class TodosComponent implements OnInit {
     private todoService: TodosService
   ) { }
 
+  totalLengt: any;
+  page: number = 1;
 
   ngOnInit(): void {
     this.todoService.getAllTodos().subscribe((todos: any[]) => {
       console.log(todos);
       this.todosList = todos;
+      this.totalLengt = todos.length;
     });
 
     this.todosList.forEach(() => {

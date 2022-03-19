@@ -17,10 +17,14 @@ export class AlbumsComponent implements OnInit {
 
   ) { }
 
+  totalLength: any;
+  page: number = 1;
+
   ngOnInit(): void {
     this.albumService.getAllAlbums().subscribe((albums: any[]) => {
       console.log(albums);
       this.albumsList = albums;
+      this.totalLength = albums.length;
     });
 
     this.albumsList.forEach(() => {

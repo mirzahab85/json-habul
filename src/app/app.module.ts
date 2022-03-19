@@ -3,6 +3,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 // ANGULAR MATERIAL imports - REGISTRUJ OD CEGA TI APP ZAVISI NA OVO LEVELU
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -56,6 +58,7 @@ import { TodosDetailsComponent } from './todos-details/todos-details.component';
     HttpClientModule,
     FlexLayoutModule,
     LayoutModule,
+    NgxPaginationModule,
 
     MatToolbarModule,
     MatButtonModule,

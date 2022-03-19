@@ -1,21 +1,25 @@
 <div class="content">
   <div fxLayout="row wrap" fxLayoutGap="16px grid">
-    <div fxFlex="25" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let comment of commentsList">
+    <div fxFlex="25" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let comment of commentsList |
+    paginate: { itemsPerPage: 20,
+      currentPage: page,
+      totalItems: totalLength
+    }">
       <mat-card class="mat-elevation-z4" *ngIf="checkif()">
         <mat-card-header>
           <mat-card-title>ID: {{comment.id}}</mat-card-title>
         </mat-card-header>
-<img mat-card-image src="assets/images/developer.jpg">
-  <mat-card-content>
-    <mat-card-actions>
-      <h1><b>Name:</b> {{comment.name}}</h1>
-      <h1><b>e-mail:</b> {{comment.email}}</h1>
-      <h1><b>body:</b> {{comment.body}}</h1>
-         <button mat-button color="primary" (click)="navigate(comment)" >Details</button>
-    </mat-card-actions>
-</mat-card-content>
-</mat-card>
+        <img mat-card-image src="assets/images/developer.jpg">
+        <mat-card-content>
+          <mat-card-actions>
+            <h1><b>Name:</b> {{comment.name}}</h1>
+            <h1><b>e-mail:</b> {{comment.email}}</h1>
+            <h1><b>body:</b> {{comment.body}}</h1>
+            <button mat-button color="primary" (click)="navigate(comment)">Details</button>
+          </mat-card-actions>
+        </mat-card-content>
+      </mat-card>
     </div>
   </div>
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
 </div>
-

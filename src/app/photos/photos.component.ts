@@ -16,10 +16,14 @@ export class PhotosComponent implements OnInit {
     private photosService: PhotosService
   ) { }
 
+  totalLength: any;
+  page: number = 1;
+
   ngOnInit(): void {
     this.photosService.getAllPhotos().subscribe((photos: any[]) => {
       console.log(photos);
         this.photosList = photos;
+        this.totalLength = photos.length;
     })
 
     this.photosList.forEach(() => {

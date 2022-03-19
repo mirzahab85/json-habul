@@ -11,15 +11,20 @@ export class CommentsComponent implements OnInit {
 
   public commentsList: any[] = [];
 
+
   constructor(
     private router: Router,
     private commentService: CommentService
   ) { }
 
+  totalLength: any;
+  page:number = 1;
+
   ngOnInit(): void {
     this.commentService.getAllComments().subscribe((comments: any[]) => {
       console.log(comments);
       this.commentsList = comments;
+      this.totalLength = comments.length;
 
     });
 
