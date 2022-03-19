@@ -36,7 +36,7 @@ const routes: Routes = [
         component: AlbumsComponent,
       },
       {
-        path: 'albums/:albumsId',
+        path: 'albums/:albumId',
         // deklarisana u app modulu.
         component: AlbumsDetailsComponent,
       },
