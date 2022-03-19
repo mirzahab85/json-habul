@@ -54,7 +54,7 @@ const routes: Routes = [
         component: TodosComponent,
       },
       {
-        path: 'todos/:todosId',
+        path: 'todos/:todoId',
         // deklarisana u app modulu.
         component: TodosDetailsComponent
       }

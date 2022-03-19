@@ -13,4 +13,7 @@ import { apiENUM, environment } from 'src/environments/environment';
   public getAllTodos(): Observable<any[]> {
     return this.httpClient.get<any[]>(environment.apiUrl + apiENUM.todos)
   }
+  public getById(id): Observable<any[]> {
+    return this.httpClient.get<any[]>(environment.apiUrl + apiENUM.todos + '/' +id)
+  }
 }
