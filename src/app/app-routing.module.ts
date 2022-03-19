@@ -44,7 +44,7 @@ const routes: Routes = [
         // deklarisana u app modulu.
         component: PhotosComponent,
       },
-      { path: 'photos/:photosId',
+      { path: 'photos/:photoId',
         // deklarisana u app modulu.
         component: PhotosDetailsComponent,
       },

@@ -14,4 +14,7 @@ export class PhotosService {
   public getAllPhotos(): Observable<any[]> {
     return this.httpClient.get<any[]>(environment.apiUrl + apiENUM.photos)
   }
+  public getById(id): Observable<any[]> {
+    return this.httpClient.get<any[]>(environment.apiUrl + apiENUM.photos + '/' +id);
+  }
 }
