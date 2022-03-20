@@ -12,13 +12,20 @@ import { CommentsComponent } from './comments/comments.component';
 import { PhotosComponent } from './photos/photos.component';
 import { TodosComponent } from './todos/todos.component';
 import { AlbumsComponent } from './albums/albums.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
-
+  {
+    path: 'login',
+    // deklarisana u app modulu.
+    loadChildren: () => import('./login-page/login-page.module').then(m => m.LoginPageModule)
+  },
   {
     path: '',
     // importovana komponent iz home module
     component: HomePageComponent,
+    // veza && - oba mora biti true
+    canActivate: [AuthGuard],
     children: [
       {
         path: 'comments',

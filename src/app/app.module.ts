@@ -36,6 +36,8 @@ import { CommentsDetailsComponent } from './comments-details/comments-details.co
 import { AlbumsDetailsComponent } from './albums-details/albums-details.component';
 import { PhotosDetailsComponent } from './photos-details/photos-details.component';
 import { TodosDetailsComponent } from './todos-details/todos-details.component';
+import { AuthGuard } from './guards/auth.guard';
+import { AuthService } from './services/auth.service';
 
 
 @NgModule({
@@ -70,8 +72,9 @@ import { TodosDetailsComponent } from './todos-details/todos-details.component';
     CommentService,
     AlbumsService,
     PhotosService,
-    TodosService
-
+    TodosService,
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
