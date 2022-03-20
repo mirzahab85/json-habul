@@ -33,7 +33,7 @@ const routes: Routes = [
       {
         path: 'albums',
         // deklarisana u app modulu.
-        component: AlbumsComponent,
+        loadChildren: () => import('./albums/albums.module').then(m => m.AlbumsModule)
       },
       {
         path: 'albums/:albumId',
@@ -54,7 +54,7 @@ const routes: Routes = [
         component: TodosComponent,
       },
       {
-        path: 'todos/:todoId',
+        path: 'todos/:todosId',
         // deklarisana u app modulu.
         component: TodosDetailsComponent
       }

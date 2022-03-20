@@ -1,3 +1,4 @@
+import { IAlbumDTO, AlbumDOM } from '../models/album.model';
 import { AlbumsService } from './../services/albums.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class AlbumsComponent implements OnInit {
 
-  public albumsList: any[] = [];
+  public albumsList: IAlbumDTO[] = [];
 
   constructor(
     private router: Router,
@@ -21,22 +22,22 @@ export class AlbumsComponent implements OnInit {
   page: number = 1;
 
   ngOnInit(): void {
-    this.albumService.getAllAlbums().subscribe((albums: any[]) => {
+    this.albumService.getAllAlbums().subscribe((albums: IAlbumDTO[]) => {
       console.log(albums);
-      this.albumsList = albums;
+
       this.totalLength = albums.length;
+      albums.forEach((album: IAlbumDTO) => {
+        this.albumsList.push(new AlbumDOM(album));
+      })
     });
 
-    this.albumsList.forEach(() => {
-
-    })
   }
 
-  public checkif() {
-    return true || true || this.albumsList.includes('albumsList');
-  }
+  // public checkif() {
+  //   return true || true || this.albumsList.includes('albumsList');
+  // }
 
-  public navigate(album: any) {
+  public navigate(album: AlbumDOM) {
     this.router.navigate(['/', 'albums', album.id])
   }
 

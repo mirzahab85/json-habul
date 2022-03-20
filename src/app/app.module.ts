@@ -32,7 +32,6 @@ import { CommentsComponent } from './comments/comments.component';
 import { PhotosComponent } from './photos/photos.component';
 import { TodosComponent } from './todos/todos.component';
 import { PostComponent } from './post/post.component';
-import { AlbumsComponent } from './albums/albums.component';
 import { CommentsDetailsComponent } from './comments-details/comments-details.component';
 import { AlbumsDetailsComponent } from './albums-details/albums-details.component';
 import { PhotosDetailsComponent } from './photos-details/photos-details.component';
@@ -46,7 +45,6 @@ import { TodosDetailsComponent } from './todos-details/todos-details.component';
     PhotosComponent,
     TodosComponent,
     PostComponent,
-    AlbumsComponent,
     CommentsDetailsComponent,
     AlbumsDetailsComponent,
     PhotosDetailsComponent,

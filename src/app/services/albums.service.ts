@@ -1,3 +1,4 @@
+import { IAlbumDTO } from '../models/album.model';
 import { apiENUM, environment } from "src/environments/environment";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
@@ -15,11 +16,11 @@ export class AlbumsService {
     private httpClient: HttpClient
   ) { }
 
-  public getAllAlbums(): Observable<any[]> {
-    return this.httpClient.get<any[]>(environment.apiUrl + apiENUM.albums);
+  public getAllAlbums(): Observable<IAlbumDTO[]> {
+    return this.httpClient.get<IAlbumDTO[]>(environment.apiUrl + apiENUM.albums);
   }
 
-  public getById(id): Observable<any[]> {
-    return this.httpClient.get<any[]>(environment.apiUrl + apiENUM.albums + '/' + id);
+  public getById(id): Observable<IAlbumDTO[]> {
+    return this.httpClient.get<IAlbumDTO[]>(environment.apiUrl + apiENUM.albums + '/' + id);
   }
 }

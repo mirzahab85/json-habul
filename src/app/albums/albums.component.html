@@ -1,11 +1,11 @@
 <div class="content">
   <div fxLayout="row wrap" fxLayoutGap="16px grid">
-    <div fxFlex="25" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let album of albumsList | 
+    <div fxFlex="25" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let album of albumsList |
       paginate: { itemsPerPage: 20,
         currentPage: page,
         totalItems: totalLength
       }">
-      <mat-card class="mat-elevation-z4" *ngIf="checkif()">
+      <mat-card class="mat-elevation-z4">
         <mat-card-header>
           <mat-card-title>ID: {{album.id}}</mat-card-title>
         </mat-card-header>
@@ -24,3 +24,4 @@
 </div>
 <pagination-controls (pageChange)="page = $event"></pagination-controls>
 </div>
+
