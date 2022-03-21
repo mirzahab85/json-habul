@@ -7,7 +7,6 @@ export interface IPhotoDTO {
 }
 
 export class PhotoDOM implements IPhotoDTO {
-  user: {id: string, name: string};
   id: number;
   albumId: number;
   title: string;
@@ -15,8 +14,14 @@ export class PhotoDOM implements IPhotoDTO {
   thumbnailUrl: string;
 
 
-constructor() {
+constructor(data: IPhotoDTO) {
 
+  Object.entries(data).forEach((property: [string, unknown], index: number) => {
+    console.log(index);
+    console.log(property[0]);
+    console.log(property[1]);
+    this[property[0]] = property[1];
+  })
 }
 
 }

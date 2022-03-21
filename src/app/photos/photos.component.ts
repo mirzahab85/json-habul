@@ -1,3 +1,4 @@
+import { IPhotoDTO, PhotoDOM } from '../models/photo.model';
 import { PhotosService } from './../services/photos.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class PhotosComponent implements OnInit {
 
-  public photosList: any[] = [];
+  public photosList: IPhotoDTO[] = [];
 
   constructor(
     private router: Router,
@@ -20,23 +21,21 @@ export class PhotosComponent implements OnInit {
   page: number = 1;
 
   ngOnInit(): void {
-    this.photosService.getAllPhotos().subscribe((photos: any[]) => {
+    this.photosService.getAllPhotos().subscribe((photos: IPhotoDTO[]) => {
       console.log(photos);
-        this.photosList = photos;
+
         this.totalLength = photos.length;
-    })
-
-    this.photosList.forEach(() => {
-
-    })
-
+       photos.forEach((photo: IPhotoDTO) => {
+         this.photosList.push(new PhotoDOM(photo));
+       })
+    });
   }
 
-    public checkif() {
-      return true || true || this.photosList.includes('photosList')
-    }
+    // public checkif() {
+    //   return true || true || this.photosList.includes('photosList')
+    // }
 
-    public navigate(photo) {
+    public navigate(photo: PhotoDOM) {
       this.router.navigate(['/', 'photos', photo.id])
     }
   }

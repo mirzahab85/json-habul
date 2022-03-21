@@ -29,7 +29,6 @@ import { CommentService } from './services/comments.service';
 import { PhotosService } from './services/photos.service';
 import { TodosService } from './services/todos.service';
 import { CommentsComponent } from './comments/comments.component';
-import { PhotosComponent } from './photos/photos.component';
 import { TodosComponent } from './todos/todos.component';
 import { PostComponent } from './post/post.component';
 import { CommentsDetailsComponent } from './comments-details/comments-details.component';
@@ -38,13 +37,13 @@ import { PhotosDetailsComponent } from './photos-details/photos-details.componen
 import { TodosDetailsComponent } from './todos-details/todos-details.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AuthService } from './services/auth.service';
+import { PhotosRoutingModule } from './photos/photos-routing.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CommentsComponent,
-    PhotosComponent,
     TodosComponent,
     PostComponent,
     CommentsDetailsComponent,
@@ -66,6 +65,7 @@ import { AuthService } from './services/auth.service';
     MatCardModule,
     HomePageModule,
     AppRoutingModule,
+    PhotosRoutingModule,
   ],
   providers: [
     UserService,

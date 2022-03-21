@@ -9,9 +9,9 @@ import { NgModule } from '@angular/core';
 // APP
 import { HomePageComponent } from './home-page/home-page.component';
 import { CommentsComponent } from './comments/comments.component';
-import { PhotosComponent } from './photos/photos.component';
+// import { PhotosComponent } from './photos/photos.component';
 import { TodosComponent } from './todos/todos.component';
-import { AlbumsComponent } from './albums/albums.component';
+// import { AlbumsComponent } from './albums/albums.component';
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
@@ -49,7 +49,7 @@ const routes: Routes = [
       },
       { path: 'photos',
         // deklarisana u app modulu.
-        component: PhotosComponent,
+        loadChildren: () => import('./photos/photos.module').then(m => m.PhotosModule)
       },
       { path: 'photos/:photoId',
         // deklarisana u app modulu.
