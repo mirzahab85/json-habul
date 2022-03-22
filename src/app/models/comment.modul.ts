@@ -1,19 +1,22 @@
-
-
 export interface ICommentDTO {
-  id: string;
+  id: number;
   name: string,
   thumbnailUrl: string;
 }
 
 export class CommentDOM implements ICommentDTO {
-  user: {id: string, name: string};
-  id: string;
+  id: number = 1;
   name: string;
   thumbnailUrl: string;
 
-  constructor() {
+  constructor(data: ICommentDTO) {
 
+    Object.entries(data).forEach((property: [string, unknown], index: number) => {
+      console.log(index);
+      console.log(property[0]);
+      console.log(property[1]);
+      this[property[0]] = property[1];
+    })
   }
 
 

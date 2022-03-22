@@ -30,7 +30,7 @@ const routes: Routes = [
       {
         path: 'comments',
         // deklarisana u app modulu.
-        component: CommentsComponent,
+        loadChildren: () => import('./comments/comments.module').then(m => m.CommentsModule)
       },
       {
         path: 'comments/:commentId',
