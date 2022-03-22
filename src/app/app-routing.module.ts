@@ -1,14 +1,13 @@
-import { TodosDetailsComponent } from './todos-details/todos-details.component';
-import { PhotosDetailsComponent } from './photos-details/photos-details.component';
-import { AlbumsDetailsComponent } from './albums-details/albums-details.component';
-import { CommentsDetailsComponent } from './comments-details/comments-details.component';
+import { TodosDetailsComponent } from './pages/todos-details/todos-details.component';
+import { PhotosDetailsComponent } from './pages/photos-details/photos-details.component';
+import { AlbumsDetailsComponent } from './pages/albums-details/albums-details.component';
+import { CommentsDetailsComponent } from './pages/comments-details/comments-details.component';
 // ANGULAR
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 // APP
-import { HomePageComponent } from './home-page/home-page.component';
-import { CommentsComponent } from './comments/comments.component';
+import { LayoutComponent } from './layout/layout.component';
 // import { PhotosComponent } from './photos/photos.component';
 // import { TodosComponent } from './todos/todos.component';
 // import { AlbumsComponent } from './albums/albums.component';
@@ -23,14 +22,14 @@ const routes: Routes = [
   {
     path: '',
     // importovana komponent iz home module
-    component: HomePageComponent,
+    component: LayoutComponent,
     // veza && - oba mora biti true
     canActivate: [AuthGuard],
     children: [
       {
         path: 'comments',
         // deklarisana u app modulu.
-        loadChildren: () => import('./comments/comments.module').then(m => m.CommentsModule)
+        loadChildren: () => import('./pages/comments/comments.module').then(m => m.CommentsModule)
       },
       {
         path: 'comments/:commentId',
@@ -40,7 +39,7 @@ const routes: Routes = [
       {
         path: 'albums',
         // deklarisana u app modulu.
-        loadChildren: () => import('./albums/albums.module').then(m => m.AlbumsModule)
+        loadChildren: () => import('./pages/albums/albums.module').then(m => m.AlbumsModule)
       },
       {
         path: 'albums/:albumId',
@@ -49,7 +48,7 @@ const routes: Routes = [
       },
       { path: 'photos',
         // deklarisana u app modulu.
-        loadChildren: () => import('./photos/photos.module').then(m => m.PhotosModule)
+        loadChildren: () => import('./pages/photos/photos.module').then(m => m.PhotosModule)
       },
       { path: 'photos/:photoId',
         // deklarisana u app modulu.
@@ -58,7 +57,7 @@ const routes: Routes = [
       {
         path: 'todos',
         // deklarisana u app modulu.
-        loadChildren: () => import('./todos/todos.module').then(m => m.TodosModule)
+        loadChildren: () => import('./pages/todos/todos.module').then(m => m.TodosModule)
       },
       {
         path: 'todos/:todosId',

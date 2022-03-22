@@ -1,7 +1,7 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Params, Router  } from '@angular/router';
-import { TodosService } from '../services/todos.service';
+import { TodosService } from '../../services/todos.service';
 
 @Component({
   selector: 'app-todos-details',

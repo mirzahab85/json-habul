@@ -1,5 +1,5 @@
-import { ITodoDTO, TodoDOM } from '../models/todo.model';
-import { TodosService } from './../services/todos.service';
+import { ITodoDTO, TodoDOM } from '../../models/todo.model';
+import { TodosService } from '../../services/todos.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 

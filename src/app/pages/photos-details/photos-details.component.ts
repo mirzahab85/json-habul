@@ -1,7 +1,7 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Params, Router } from '@angular/router';
-import { PhotosService } from '../services/photos.service';
+import { PhotosService } from '../../services/photos.service';
 
 @Component({
   selector: 'app-photos-details',

@@ -1,5 +1,5 @@
-import { IAlbumDTO, AlbumDOM } from '../models/album.model';
-import { AlbumsService } from './../services/albums.service';
+import { IAlbumDTO, AlbumDOM } from '../../models/album.model';
+import { AlbumsService } from '../../services/albums.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 

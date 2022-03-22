@@ -1,5 +1,5 @@
-import { IPhotoDTO, PhotoDOM } from '../models/photo.model';
-import { PhotosService } from './../services/photos.service';
+import { IPhotoDTO, PhotoDOM } from '../../models/photo.model';
+import { PhotosService } from '../../services/photos.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 

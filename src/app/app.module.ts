@@ -29,15 +29,15 @@ import { CommentService } from './services/comments.service';
 import { PhotosService } from './services/photos.service';
 import { TodosService } from './services/todos.service';
 import { PostComponent } from './post/post.component';
-import { CommentsDetailsComponent } from './comments-details/comments-details.component';
-import { AlbumsDetailsComponent } from './albums-details/albums-details.component';
-import { PhotosDetailsComponent } from './photos-details/photos-details.component';
-import { TodosDetailsComponent } from './todos-details/todos-details.component';
+import { CommentsDetailsComponent } from './pages/comments-details/comments-details.component';
+import { AlbumsDetailsComponent } from './pages/albums-details/albums-details.component';
+import { PhotosDetailsComponent } from './pages/photos-details/photos-details.component';
+import { TodosDetailsComponent } from './pages/todos-details/todos-details.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AuthService } from './services/auth.service';
-import { PhotosRoutingModule } from './photos/photos-routing.module';
-import { CommentsRoutingModule } from './comments/comments-routing.module';
-import { TodosRoutingModule } from './todos/todos-routing.module';
+import { PhotosRoutingModule } from './pages/photos/photos-routing.module';
+import { CommentsRoutingModule } from './pages/comments/comments-routing.module';
+import { TodosRoutingModule } from './pages/todos/todos-routing.module';
 
 
 @NgModule({
