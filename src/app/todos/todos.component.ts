@@ -1,3 +1,4 @@
+import { ITodoDTO, TodoDOM } from '../models/todo.model';
 import { TodosService } from './../services/todos.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -11,32 +12,32 @@ export class TodosComponent implements OnInit {
 
   public todosList: any[] = [];
 
+
   constructor(
     private router: Router,
-    private todoService: TodosService
+    private todosService: TodosService
   ) { }
 
-  totalLengt: any;
-  page: number = 1;
+  totalLength: any;
+  page:number = 1;
 
   ngOnInit(): void {
-    this.todoService.getAllTodos().subscribe((todos: any[]) => {
+    this.todosService.getAllTodos().subscribe((todos: ITodoDTO[]) => {
       console.log(todos);
-      this.todosList = todos;
-      this.totalLengt = todos.length;
+
+      this.totalLength = todos.length;
+      todos.forEach((todos: ITodoDTO) => {
+        this.todosList.push(new TodoDOM(todos));
+      })
     });
-
-    this.todosList.forEach(() => {
-
-    })
-  }
-    public checkif() {
-      return true || true || this.todosList.includes('todosList');
-    }
-
-    public navigate(todo) {
-      this.router.navigate(['/', 'todos', todo.id])
-    }
   }
 
+  // public checkif() {
+  //   return true || true || this.commentsList.includes('commentsList')
+  // }
 
+  public navigate(todo: TodoDOM) {
+    this.router.navigate(['/', 'todo', todo.id])
+  }
+
+}

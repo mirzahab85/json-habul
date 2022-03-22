@@ -28,7 +28,6 @@ import { AlbumsService } from './services/albums.service';
 import { CommentService } from './services/comments.service';
 import { PhotosService } from './services/photos.service';
 import { TodosService } from './services/todos.service';
-import { TodosComponent } from './todos/todos.component';
 import { PostComponent } from './post/post.component';
 import { CommentsDetailsComponent } from './comments-details/comments-details.component';
 import { AlbumsDetailsComponent } from './albums-details/albums-details.component';
@@ -38,12 +37,12 @@ import { AuthGuard } from './guards/auth.guard';
 import { AuthService } from './services/auth.service';
 import { PhotosRoutingModule } from './photos/photos-routing.module';
 import { CommentsRoutingModule } from './comments/comments-routing.module';
+import { TodosRoutingModule } from './todos/todos-routing.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodosComponent,
     PostComponent,
     CommentsDetailsComponent,
     AlbumsDetailsComponent,
@@ -57,7 +56,6 @@ import { CommentsRoutingModule } from './comments/comments-routing.module';
     FlexLayoutModule,
     LayoutModule,
     NgxPaginationModule,
-
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
@@ -66,6 +64,7 @@ import { CommentsRoutingModule } from './comments/comments-routing.module';
     AppRoutingModule,
     PhotosRoutingModule,
     CommentsRoutingModule,
+    TodosRoutingModule,
   ],
   providers: [
     UserService,

@@ -10,7 +10,7 @@ import { NgModule } from '@angular/core';
 import { HomePageComponent } from './home-page/home-page.component';
 import { CommentsComponent } from './comments/comments.component';
 // import { PhotosComponent } from './photos/photos.component';
-import { TodosComponent } from './todos/todos.component';
+// import { TodosComponent } from './todos/todos.component';
 // import { AlbumsComponent } from './albums/albums.component';
 import { AuthGuard } from './guards/auth.guard';
 
@@ -58,7 +58,7 @@ const routes: Routes = [
       {
         path: 'todos',
         // deklarisana u app modulu.
-        component: TodosComponent,
+        loadChildren: () => import('./todos/todos.module').then(m => m.TodosModule)
       },
       {
         path: 'todos/:todosId',

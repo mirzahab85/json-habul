@@ -1,4 +1,4 @@
-import { ICommentDTO, CommentDOM } from '../models/comment.modul';
+import { ICommentDTO, CommentDOM } from '../models/comment.model';
 import { CommentService } from './../services/comments.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
