@@ -1,7 +1,9 @@
+
 import { TodosDetailsComponent } from './pages/todos-details/todos-details.component';
 import { PhotosDetailsComponent } from './pages/photos-details/photos-details.component';
 import { AlbumsDetailsComponent } from './pages/albums-details/albums-details.component';
 import { CommentsDetailsComponent } from './pages/comments-details/comments-details.component';
+
 // ANGULAR
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -12,10 +14,13 @@ import { LayoutComponent } from './layout/layout.component';
 // import { TodosComponent } from './todos/todos.component';
 // import { AlbumsComponent } from './albums/albums.component';
 import { AuthGuard } from './guards/auth.guard';
+import { ENUM_ZA_RUTE_KAKO_SE_ZOVU_SAMO_DA_NIJE_NEKI_STRING_KOJI_MORAM_PAMTITI } from './config';
+
+
 
 const routes: Routes = [
   {
-    path: 'login',
+    path: ENUM_ZA_RUTE_KAKO_SE_ZOVU_SAMO_DA_NIJE_NEKI_STRING_KOJI_MORAM_PAMTITI.LOGIN,
     // deklarisana u app modulu.
     loadChildren: () => import('./login-page/login-page.module').then(m => m.LoginPageModule)
   },
@@ -30,6 +35,11 @@ const routes: Routes = [
         path: 'comments',
         // deklarisana u app modulu.
         loadChildren: () => import('./pages/comments/comments.module').then(m => m.CommentsModule)
+      },
+      {
+        path: 'home',
+        // deklarisana u app modulu.
+        loadChildren: () => import('./home-page/home-page.module').then(m => m.HomePageModule)
       },
       {
         path: 'comments/:commentId',

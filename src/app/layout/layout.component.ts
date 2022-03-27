@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MediaChange, MediaObserver } from '@angular/flex-layout';
+import { navigation } from '../config';
 
 @Component({
   selector: 'app-layout',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  constructor() { }
+  public navigationItems: any[]=  navigation;
+
+
+  constructor(
+    private mediaObserver: MediaObserver
+  ) { }
 
   ngOnInit(): void {
+
+    this.mediaObserver.asObservable().subscribe((values) => {
+      console.log(values);
+    })
   }
 
 }

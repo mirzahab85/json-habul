@@ -17,9 +17,6 @@ import { MatButtonModule } from '@angular/material/button';
   declarations: [
     HomePageComponent
   ],
-  exports: [
-    HomePageComponent
-  ],
   imports: [
     CommonModule,
     MatToolbarModule,

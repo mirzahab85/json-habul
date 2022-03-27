@@ -3,16 +3,38 @@
       <mat-icon >home</mat-icon>
       Home
   </span>
-
   <div class="spacer"></div>
-  <a mat-button [routerLink]="['/', 'comments']" routerLinkActive="active">Comments</a>
-  <a mat-button [routerLink]="['/', 'albums']" routerLinkActive="active">Albums</a>
-  <a mat-button [routerLink]="['/', 'photos']" routerLinkActive="active">Photos</a>
-  <a mat-button [routerLink]="['/', 'todos']" routerLinkActive="active">Todos</a>
+
+  <a mat-button *ngFor="let navitem of navigationItems" [routerLink]="navitem.routerLink" routerLinkActive="active">
+    {{ navitem.title }}
+  </a>
 
 </mat-toolbar>
 
 <div>
-  <router-outlet></router-outlet>
-</div>
+  <span fxFlex="274px">
+    <!-- <user-data></user-data> -->
+    <app-sidebar [novinavigationItems]="navigationItems"></app-sidebar>
+  </span>
+  <span fxFlex="calc(100% - 274px)">
+    <router-outlet></router-outlet>
+  </span>
+ </div>
+
+ <!-- <mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <p>Auto-resizing sidenav</p>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Toggle sidenav
+    </button>
+  </div>
+
+</mat-drawer-container> -->
 
