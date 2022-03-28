@@ -31,7 +31,6 @@ import { PhotosService } from './services/photos.service';
 import { TodosService } from './services/todos.service';
 import { PostComponent } from './post/post.component';
 import { CommentsDetailsComponent } from './pages/comments-details/comments-details.component';
-import { AlbumsDetailsComponent } from './pages/albums-details/albums-details.component';
 import { PhotosDetailsComponent } from './pages/photos-details/photos-details.component';
 import { TodosDetailsComponent } from './pages/todos-details/todos-details.component';
 import { AuthGuard } from './guards/auth.guard';
@@ -44,7 +43,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     AppComponent,
     PostComponent,
     CommentsDetailsComponent,
-    AlbumsDetailsComponent,
     PhotosDetailsComponent,
     TodosDetailsComponent,
   ],

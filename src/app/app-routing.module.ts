@@ -1,3 +1,4 @@
+import { AlbumsDetailsModule } from './pages/albums-details/albums-details.module';
 
 import { TodosDetailsComponent } from './pages/todos-details/todos-details.component';
 import { PhotosDetailsComponent } from './pages/photos-details/photos-details.component';
@@ -54,7 +55,7 @@ const routes: Routes = [
       {
         path: 'albums/:albumId',
         // deklarisana u app modulu.
-        component: AlbumsDetailsComponent,
+        loadChildren: () => import('./pages/albums-details/albums-details.module').then(m => m.AlbumsDetailsModule )
       },
       { path: 'photos',
         // deklarisana u app modulu.
