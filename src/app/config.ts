@@ -12,8 +12,8 @@ export const navigation = [
     routerLink: ['/', 'albums']
   },
   {
-    title: 'Posts',
-    routerLink: ['/', 'posts']
+    title: 'Photos',
+    routerLink: ['/', 'photos']
   },
   {
     title: 'Todos',

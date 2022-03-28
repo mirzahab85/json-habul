@@ -1,9 +1,6 @@
-import { AlbumsDetailsModule } from './pages/albums-details/albums-details.module';
 
 import { TodosDetailsComponent } from './pages/todos-details/todos-details.component';
 import { PhotosDetailsComponent } from './pages/photos-details/photos-details.component';
-import { AlbumsDetailsComponent } from './pages/albums-details/albums-details.component';
-import { CommentsDetailsComponent } from './pages/comments-details/comments-details.component';
 
 // ANGULAR
 import { RouterModule, Routes } from '@angular/router';
@@ -45,7 +42,7 @@ const routes: Routes = [
       {
         path: 'comments/:commentId',
         // deklarisana u app modulu.
-        component: CommentsDetailsComponent,
+        loadChildren: () => import('./pages/comments-details/comments-details.module').then(m => m.CommentsDetailsModule)
       },
       {
         path: 'albums',
