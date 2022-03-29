@@ -37,7 +37,7 @@ export class TodosComponent implements OnInit {
   // }
 
   public navigate(todo: TodoDOM) {
-    this.router.navigate(['/', 'todo', todo.id])
+    this.router.navigate(['/', 'todos', todo.id])
   }
 
 }

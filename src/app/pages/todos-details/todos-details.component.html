@@ -8,15 +8,14 @@
 <img mat-card-image src="assets/images/developer.jpg">
   <mat-card-content>
     <mat-card-actions>
-      <div>
-        <h1><b>userID: {{ todoDTO.userId }}</b></h1>
-        <h1><b>Title:</b> {{todoDTO.title}}</h1>
-        <h1><b>Completed:</b> {{todoDTO.completed}}</h1>
-      </div>
+
+        <h1><b>userID: {{todoDTO?.userId}}</b></h1>
+        <h1><b>Title:</b> {{todoDTO?.title}}</h1>
+        <h1><b>Completed:</b> {{todoDTO?.completed}}</h1>
+
     </mat-card-actions>
 </mat-card-content>
 </mat-card>
     </div>
   </div>
-
 </div>

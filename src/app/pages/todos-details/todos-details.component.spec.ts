@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TodosDetailsComponent } from './todos-details.component';
 
 describe('TodosDetailsComponent', () => {

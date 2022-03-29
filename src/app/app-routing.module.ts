@@ -1,20 +1,11 @@
-
-import { TodosDetailsComponent } from './pages/todos-details/todos-details.component';
-import { PhotosDetailsComponent } from './pages/photos-details/photos-details.component';
-
 // ANGULAR
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 // APP
 import { LayoutComponent } from './layout/layout.component';
-// import { PhotosComponent } from './photos/photos.component';
-// import { TodosComponent } from './todos/todos.component';
-// import { AlbumsComponent } from './albums/albums.component';
 import { AuthGuard } from './guards/auth.guard';
 import { ENUM_ZA_RUTE_KAKO_SE_ZOVU_SAMO_DA_NIJE_NEKI_STRING_KOJI_MORAM_PAMTITI } from './config';
-
-
 
 const routes: Routes = [
   {
@@ -70,7 +61,7 @@ const routes: Routes = [
       {
         path: 'todos/:todosId',
         // deklarisana u app modulu.
-        component: TodosDetailsComponent
+        loadChildren: () => import('./pages/todos-details/todos-details.module').then(m => m.TodosDetailsModule)
       }
     ],
     data: { label: 'Comments' }

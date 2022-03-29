@@ -14,8 +14,12 @@
   <mat-card-content>
       <h1><strong>Title:</strong>{{photo.title}}</h1>
     <mat-card-actions>
+      
+      <div>
       <h1>URL:{{photo.url}}</h1>
       <h1>thumbnailUrl:{{photo.thumbnailUrl}}</h1>
+      </div>
+
          <button mat-button color="primary" (click)="navigate(photo)">Details</button>
         </mat-card-actions>
       </mat-card-content>

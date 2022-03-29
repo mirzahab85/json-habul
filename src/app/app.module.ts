@@ -30,7 +30,6 @@ import { CommentService } from './services/comments.service';
 import { PhotosService } from './services/photos.service';
 import { TodosService } from './services/todos.service';
 import { PostComponent } from './post/post.component';
-import { TodosDetailsComponent } from './pages/todos-details/todos-details.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AuthService } from './services/auth.service';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -40,7 +39,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
   declarations: [
     AppComponent,
     PostComponent,
-    TodosDetailsComponent,
   ],
   imports: [
     BrowserModule,
