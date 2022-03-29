@@ -30,14 +30,14 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       {
-        path: 'comments',
-        // deklarisana u app modulu.
-        loadChildren: () => import('./pages/comments/comments.module').then(m => m.CommentsModule)
-      },
-      {
         path: 'home',
         // deklarisana u app modulu.
         loadChildren: () => import('./home-page/home-page.module').then(m => m.HomePageModule)
+      },
+      {
+        path: 'comments',
+        // deklarisana u app modulu.
+        loadChildren: () => import('./pages/comments/comments.module').then(m => m.CommentsModule)
       },
       {
         path: 'comments/:commentId',
@@ -60,7 +60,7 @@ const routes: Routes = [
       },
       { path: 'photos/:photoId',
         // deklarisana u app modulu.
-        component: PhotosDetailsComponent,
+        loadChildren: () => import('./pages/photos-details/photos-details.module').then(m => m.PhotosDetailsModule)
       },
       {
         path: 'todos',
