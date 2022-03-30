@@ -59,7 +59,7 @@ const routes: Routes = [
         loadChildren: () => import('./pages/todos/todos.module').then(m => m.TodosModule)
       },
       {
-        path: 'todos/:todosId',
+        path: 'todos/:todoId',
         // deklarisana u app modulu.
         loadChildren: () => import('./pages/todos-details/todos-details.module').then(m => m.TodosDetailsModule)
       }

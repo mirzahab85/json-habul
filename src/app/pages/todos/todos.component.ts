@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class TodosComponent implements OnInit {
 
-  public todosList: any[] = [];
+  public todosList: ITodoDTO[] = [];
 
 
   constructor(
