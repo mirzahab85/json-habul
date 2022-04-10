@@ -22,7 +22,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
       if (typeof NavigationEnd) {
-        console.log(event);
+        // console.log(event);
       }
     });
   }
